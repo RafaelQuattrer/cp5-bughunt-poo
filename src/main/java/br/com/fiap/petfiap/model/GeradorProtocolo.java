@@ -5,7 +5,7 @@ package br.com.fiap.petfiap.model;
 // Thread-safe para o uso concorrente do pet shop.
 public class GeradorProtocolo {
 
-    private static GeradorProtocolo instancia;
+    private static final GeradorProtocolo INSTANCIA = new GeradorProtocolo();
 
     private int contador;
 
@@ -15,13 +15,10 @@ public class GeradorProtocolo {
     }
 
     public static GeradorProtocolo getInstancia() {
-        if (instancia == null) {
-            return new GeradorProtocolo();
-        }
-        return instancia;
+        return INSTANCIA;
     }
 
-    public int proximo() {
+    public synchronized int proximo() {
         contador++;
         return contador;
     }
