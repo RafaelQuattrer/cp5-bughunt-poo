@@ -2,22 +2,20 @@
 
 ## Identificação
 
-**Grupo:** PREENCHER
-
 | Integrante | RM | Turma |
 |---|---|---|
-| Letícia Gabrielle Andrade Temóteo | 563985 | PREENCHER |
-| Bruno Otávio da Cruz Carvalho | 562354 | PREENCHER |
-| Rafael Quattrer Dalla Costa | 562052 | PREENCHER |
-| João Vitor Santana Silva Ribeiro | 564693 | PREENCHER |
-| Rafael Louzã Lopes | 564963 | PREENCHER |
+| Letícia Gabrielle Andrade Temóteo | 563985 | 2CCPG |
+| Bruno Otávio da Cruz Carvalho | 562354 | 2CCPG |
+| Rafael Quattrer Dalla Costa | 562052 | 2CCPG |
+| João Vitor Santana Silva Ribeiro | 564693 | 2CCPG |
+| Rafael Louzã Lopes | 564963 | 2CCPG |
 
 | Campo | |
 |---|---|
 | **Total de bugs corrigidos** | 12 / 12 |
 | **Total de ajustes de Clean Code** | 6 / 6 |
 | **Total de testes novos escritos** | 6 / 6 |
-| **Suíte final (Run As → JUnit Test)** | 26 testes — validar execução no Eclipse/Maven antes da entrega |
+| **Suíte final (Run As → JUnit Test)** | 26 testes, 0 falhas, 0 erros, 0 ignorados — validado com `mvn clean verify` |
 
 ---
 
@@ -87,3 +85,9 @@ Os testes que já nasceram verdes continuam úteis porque registram uma regra e 
 ## Parte 5 — Espaço livre
 
 Projeto corrigido preservando a estrutura original, sem alterar os 20 testes fornecidos. Foram adicionados somente os 6 testes exigidos pelo checkpoint.
+
+## Validação final
+
+Em 28/09/2026, a execução de `mvn clean verify` terminou com **BUILD SUCCESS**: 26 testes aprovados e JAR gerado. Ambiente: Maven 3.9.9 e OpenJDK 21.0.9, com compilação configurada para Java 17 no `pom.xml`.
+
+Para repetir a validação, execute `mvn clean verify` na raiz do projeto com JDK 17 ou superior e Maven instalados. Os testes são unitários e não dependem do Oracle. A conexão real com o Oracle não foi validada; `application.properties` mantém apenas os placeholders `SEU_RM` e `SUA_SENHA`. Para executar a API com Oracle, forneça as credenciais localmente pelas variáveis de ambiente `SPRING_DATASOURCE_USERNAME` e `SPRING_DATASOURCE_PASSWORD`, sem versionar segredos.
